@@ -3,12 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "ag-grid-community": "^23.2.1",
+    "cors": "^2.8.5",
+    "expo-linear-gradient": "^8.1.0",
+    "express": "^4.17.1",
+    "material-table": "^1.61.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-media": "^1.10.0",
+    "react-native": "^0.62.2",
+    "react-native-elements": "^2.0.2",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-paper": "^3.10.1",
+    "react-native-responsive-screen": "^1.4.1",
+    "react-native-table-component": "^1.2.1",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "^0.12.3",
+    "react-native-web-linear-gradient": "^1.1.1",
+    "react-scripts": "3.4.1",
+    "react-super-responsive-table": "^5.1.1",
+    "sticky-react-table": "^0.4.26",
+    "styled-components": "^5.1.1",
+    "xmlhttprequest": "^1.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +51,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-decorators": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "webpack": "^4.43.0"
   }
 }
