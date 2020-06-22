@@ -12,7 +12,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import ReactDOM from 'react-dom';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
-import topgainers from './topgainers'
+//import topgainers from './topgainers'
+import testCode from './testCode'
 var cors = require('cors')
 
 
@@ -179,8 +180,8 @@ Portfolio
       </Thead>
       <Tbody>
         <Tr>
-          <Td>{topgainers.top2GainerPrice }</Td>
-<Td>{topgainers.top2GainerTicker}</Td>
+          <Td>{ }</Td>
+<Td>{testCode.topGainerTicker}</Td>
           <Td>East Annex</Td>
         </Tr>
         <Tr>
