@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ReactDOM from 'react-dom';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
-import topgainers from './topgainers'
+import topgainers from 'topgainers'
 
 
 var request = require("request");
