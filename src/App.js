@@ -13,7 +13,9 @@ import ReactDOM from 'react-dom';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 //import topgainers from './topgainers'
-import testCode from './testCode'
+//import testCode from './testCode'
+import { testCode } from 'history';
+
 var cors = require('cors')
 
 
