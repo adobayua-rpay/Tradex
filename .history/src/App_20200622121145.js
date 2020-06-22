@@ -107,7 +107,8 @@ class App extends Component {
 
   render() {
     
-  
+  app.options('*', cors()) // include before other routes 
+  app.use(cors())
    // const classes = useStyles();
 
     
@@ -180,7 +181,7 @@ Portfolio
       <Tbody>
         <Tr>
           <Td>{topgainers.top2GainerPrice }</Td>
-<Td>{topgainers.top2GainerTicker}</Td>
+          <Td>9 April 2019</Td>
           <Td>East Annex</Td>
         </Tr>
         <Tr>

@@ -20,7 +20,7 @@ var options = {
 var req = http.request(options, function (res) {
   var chunks = [];
 
-  res.setHeader('Access-Control-Allow-Origin', 'https://financialmodelingprep.com/api/v3/gainers?apikey=137765ad0e9db27136a01bd2bf07d452');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001/');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT,    PATCH, DELETE');

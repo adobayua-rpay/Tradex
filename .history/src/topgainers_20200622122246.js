@@ -3,7 +3,7 @@ var request = require("request");
 
 
 
-var http = require("https");
+var http = require("http");
 
 var options = {
   "method": "POST",
@@ -20,7 +20,7 @@ var options = {
 var req = http.request(options, function (res) {
   var chunks = [];
 
-  res.setHeader('Access-Control-Allow-Origin', 'https://financialmodelingprep.com/api/v3/gainers?apikey=137765ad0e9db27136a01bd2bf07d452');
+  res.setHeader('Access-Control-Allow-Origin', '*');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT,    PATCH, DELETE');

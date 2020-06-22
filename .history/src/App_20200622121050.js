@@ -16,6 +16,8 @@ import topgainers from './topgainers'
 var cors = require('cors')
 
 
+app.options('*', cors()) // include before other routes 
+app.use(cors())
 
 var request = require("request");
 
@@ -104,10 +106,8 @@ class App extends Component {
 
   
 
-
   render() {
     
-  
    // const classes = useStyles();
 
     
@@ -180,7 +180,7 @@ Portfolio
       <Tbody>
         <Tr>
           <Td>{topgainers.top2GainerPrice }</Td>
-<Td>{topgainers.top2GainerTicker}</Td>
+          <Td>9 April 2019</Td>
           <Td>East Annex</Td>
         </Tr>
         <Tr>

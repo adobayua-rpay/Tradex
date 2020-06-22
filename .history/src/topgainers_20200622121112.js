@@ -1,44 +1,30 @@
 var request = require("request");
+var cors = require('cors')
+
+
+app.options('*', cors()) // include before other routes 
+app.use(cors())
 
 
 
+var options = { method: 'POST',
+  url: 'http://financialmodelingprep.com/api/v3/gainers',
+ // mode: 'no-cors',
+  qs: { apikey: '137765ad0e9db27136a01bd2bf07d452' },
+  headers: 
+   { 'postman-token': '9f1c826c-2944-9d20-bc5c-3fbb375bf3c5', 
+   "access-control-allow-origin": '*',
+   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+   "Access-Control-Allow-Credentials": true,
+    "Access-Control-Max-Age": 3600,
+   "Access-Control-Allow-Headers": "origin, content-type, accept",
+     'cache-control': 'no-cache',  } };
 
-var http = require("https");
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
 
-var options = {
-  "method": "POST",
-  "hostname": "financialmodelingprep.com",
-  "port": null,
-  "path": "/api/v3/gainers?apikey=137765ad0e9db27136a01bd2bf07d452",
-  "headers": {
-    "cache-control": "no-cache",
-    'Access-Control-Allow-Origin': '*',
-    "postman-token": "45497999-debb-0864-676b-221324a4ff1d"
-  }
-};
+  console.log(body);
 
-var req = http.request(options, function (res) {
-  var chunks = [];
-
-  res.setHeader('Access-Control-Allow-Origin', 'https://financialmodelingprep.com/api/v3/gainers?apikey=137765ad0e9db27136a01bd2bf07d452');
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT,    PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function () {
-    var body = Buffer.concat(chunks);
-    console.log(body.toString());
 
     var jsonParsed = JSON.parse(body.toString);
     var topGainerTicker = jsonParsed[0].ticker
@@ -72,17 +58,8 @@ var req = http.request(options, function (res) {
    var top3GainercompanyName = jsonParsed[2].companyName
    var top4GainercompanyName = jsonParsed[3].companyName
    var top4GainercompanyName = jsonParsed[4].companyName
-
-
-  });
-});
-
-req.end();
-
-
-   
   
- // });
+  });
 //});
 
 
