@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ReactDOM from 'react-dom';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
-
+//import topgainers from '/Users/adobayua/Desktop/myapp/src/topgainers.js'
 
 
 var request = require("request");
@@ -44,58 +44,57 @@ const useStyles = makeStyles({
 
 
   
-
+//topGainers();
 
 function topGainers(){
-  var options = { method: 'GET',
-  url: 'https://financialmodelingprep.com/api/v3/gainers',
-  qs: { apikey: '137765ad0e9db27136a01bd2bf07d452' },
-  headers: 
-   { 'postman-token': '8dfd9e28-85b2-e5dd-4e0f-e6bc1b4855f2',
-     'cache-control': 'no-cache' } };
+  // var options = { method: 'GET',
+  // url: 'http://financialmodelingprep.com/api/v3/gainers',
+  // qs: { apikey: '137765ad0e9db27136a01bd2bf07d452' },
+  // headers: 
+  //  { 'postman-token': '8dfd9e28-85b2-e5dd-4e0f-e6bc1b4855f2',
+  //    'cache-control': 'no-cache' } };
   
-  request(options, function (error, response, body) {
-  if (error) throw new Error(error);
+  // request(options, function (error, response, body) {
+  // if (error) throw new Error(error);
   
-  var jsonParsed = JSON.parse(body);
-  //console.log(jsonParsed[2].ticker)
+  // var jsonParsed = JSON.parse(body);
+  // //console.log(jsonParsed[2].ticker)
   
-  var topGainerTicker = jsonParsed[0].ticker
-  console.log (topGainerTicker)
-  var top2GainerTicker = jsonParsed[1].ticker
-  var top3GainerTicker = jsonParsed[2].ticker
-  var top4GainerTicker = jsonParsed[3].ticker
-  var top5GainerTicker = jsonParsed[4].ticker
+  // var topGainerTicker = jsonParsed[0].ticker
+  // console.log (topGainerTicker)
+  // var top2GainerTicker = jsonParsed[1].ticker
+  // var top3GainerTicker = jsonParsed[2].ticker
+  // var top4GainerTicker = jsonParsed[3].ticker
+  // var top5GainerTicker = jsonParsed[4].ticker
   
-  var topGainerTickerChange = jsonParsed[0].changes
-  var top2GainerTickerChange = jsonParsed[1].changes
-  var top3GainerTickerChange = jsonParsed[2].changes
-  var top4GainerTickerChange = jsonParsed[3].changes
-  var top5GainerTickerChange = jsonParsed[4].changes
+  // var topGainerTickerChange = jsonParsed[0].changes
+  // var top2GainerTickerChange = jsonParsed[1].changes
+  // var top3GainerTickerChange = jsonParsed[2].changes
+  // var top4GainerTickerChange = jsonParsed[3].changes
+  // var top5GainerTickerChange = jsonParsed[4].changes
   
-  var topGainerChangepct = jsonParsed[0].changesPercentage
-  var top2GainerChangepct = jsonParsed[1].changesPercentage
-  var top3GainerChangepct = jsonParsed[2].changesPercentage
-  var top4GainerChangepct = jsonParsed[3].changesPercentage
-  var top5GainerChangepct = jsonParsed[4].changesPercentage
+  // var topGainerChangepct = jsonParsed[0].changesPercentage
+  // var top2GainerChangepct = jsonParsed[1].changesPercentage
+  // var top3GainerChangepct = jsonParsed[2].changesPercentage
+  // var top4GainerChangepct = jsonParsed[3].changesPercentage
+  // var top5GainerChangepct = jsonParsed[4].changesPercentage
   
-  var topGainerPrice = jsonParsed[0].price
-  var top2GainerPrice = jsonParsed[1].price
-  var top3GainerPrice = jsonParsed[2].price
-  var top4GainerPrice = jsonParsed[3].price
-  var top5GainerPrice = jsonParsed[4].price
-  
-  
-  var topGainercompanyName = jsonParsed[0].companyName
-  var top2GainercompanyName = jsonParsed[1].companyName
-  var top3GainercompanyName = jsonParsed[2].companyName
-  var top4GainercompanyName = jsonParsed[3].companyName
-  var top4GainercompanyName = jsonParsed[4].companyName
+  // var topGainerPrice = jsonParsed[0].price
+  // var top2GainerPrice = jsonParsed[1].price
+  // var top3GainerPrice = jsonParsed[2].price
+  // var top4GainerPrice = jsonParsed[3].price
+  // var top5GainerPrice = jsonParsed[4].price
   
   
-  });
+  // var topGainercompanyName = jsonParsed[0].companyName
+  // var top2GainercompanyName = jsonParsed[1].companyName
+  // var top3GainercompanyName = jsonParsed[2].companyName
+  // var top4GainercompanyName = jsonParsed[3].companyName
+  // var top4GainercompanyName = jsonParsed[4].companyName
   
-}
+  
+  // });
+ 
 
 
 class App extends Component {
@@ -175,8 +174,8 @@ Portfolio
       </Thead>
       <Tbody>
         <Tr>
-          <Td>{ topGainers.top3GainerTicker }</Td>
-          <Td>9 April 2019</Td>
+          <Td>{ }</Td>
+<Td>{}</Td>
           <Td>East Annex</Td>
         </Tr>
         <Tr>
@@ -186,8 +185,8 @@ Portfolio
         </Tr>
         <Tr>
           <Td>Tuscaloosa D3</Td>
-          <Td>29 June 2019</Td>
-          <Td>Github</Td>
+          <Td>{ "top" }</Td>
+<Td>{}</Td>
         </Tr>
       </Tbody>
     </Table>
